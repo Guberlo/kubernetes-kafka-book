@@ -22,7 +22,7 @@
 - Set a persistent (JBOD) Kafka cluster:
     ```sh
     # Three nodes each for Kafka and Zookeeper  
-    $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent.yaml -n kafka
+    $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
     ```
 - Wait for Kubernetes to run all the pods:
     ```sh
@@ -34,11 +34,8 @@
     ```
 - Check the existing topics:
     ```sh
-    # SSH into the pod
-    kubectl exec --stdin --tty my-cluster-kafka-0 -- /bin/bash
-
-    # List kafka topics
-    bin/kafka-topics.sh --list --bootstrap-server my-cluster-kafka-bootstrap:9092
+    # Create a new pod which will execute the kafka-topic.sh script
+    kubectl -n kafka run kafka-topics -it --image=quay.io/strimzi/kafka:0.24.0-kafka-2.8.0 --rm=true --restart=Never -- bin/kafka-topics.sh --list --bootstrap-server my-cluster-kafka-bootstrap:9092
     ```
 
 Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
