@@ -21,7 +21,7 @@
     ```
 - Set a persistent (JBOD) Kafka cluster:
     ```sh
-    # Three nodes each for Kafka and Zookeeper  
+    # One node for Kafka and Zookeeper  
     $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
     ```
 - Wait for Kubernetes to run all the pods:
