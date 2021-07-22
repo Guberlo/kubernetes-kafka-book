@@ -196,6 +196,11 @@
    Why Kafka?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-kubernetes">
+   Why Kubernetes?
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -212,25 +217,39 @@
 <p>This is a simple book which illustrates how to easily set up a development Kafka cluster on Kubernetes.</p>
 <div class="section" id="why-kafka">
 <h2>Why Kafka?<a class="headerlink" href="#why-kafka" title="Permalink to this headline">¶</a></h2>
-<p>Apache Kafka is an open source, distributed streaming platform developed by LinkedIn to manage​
-the huge amount of messages per day. Its architecture and capabilities can deliver:</p>
+<img src="images/kafka.png" alt="kafka" width="500" align="right"/>
+<p>Apache Kafka is an open source, distributed streaming platform developed by LinkedIn in order to manage the huge amount of messages per day.<br />
+Its architecture and capabilities can deliver:</p>
 <ul class="simple">
-<li><p>Microservices architecture and extremely high throughput data sharing</p></li>
-<li><p>Message ordering guarantees</p></li>
-<li><p>Message rewind/replay from data storage to reconstruct an application state</p></li>
-<li><p>Horizontal scalability in a cluster configuration</p></li>
+<li><p><strong>Microservices</strong> architecture and extremely <strong>high throughput</strong> data sharing</p></li>
+<li><p><strong>Message ordering guarantees</strong></p></li>
+<li><p>Message <strong>rewind/replay</strong> from data storage to reconstruct an <strong>application state</strong></p></li>
+<li><p><strong>Horizontal scalability</strong> in a cluster configuration</p></li>
 </ul>
 <p>If we find ourselves in one of the following use cases, then we might consider to start using Kafka:</p>
 <ul class="simple">
-<li><p>Event-driven architectures</p></li>
-<li><p>Event sourcing to capture changes to the state of an application as a log of events</p></li>
-<li><p>Message brokering</p></li>
-<li><p>Website activity tracking</p></li>
-<li><p>Operational monitoring through metrics</p></li>
-<li><p>Log collection and aggregation</p></li>
-<li><p>Commit logs for distributed systems</p></li>
-<li><p>Stream processing so that applications can respond to data in real time</p></li>
+<li><p><strong>Event-driven architectures</strong></p></li>
+<li><p>Event sourcing to capture changes to the state of an application as a <strong>log of events</strong></p></li>
+<li><p><strong>Message brokering</strong></p></li>
+<li><p><strong>Website activity tracking</strong></p></li>
+<li><p>Operational <strong>monitoring</strong> through metrics</p></li>
+<li><p><strong>Log collection and aggregation</strong></p></li>
+<li><p>Commit logs for <strong>distributed systems</strong></p></li>
+<li><p><strong>Stream processing</strong> so that applications can respond to data in <strong>real time</strong></p></li>
 </ul>
+</div>
+<div class="section" id="why-kubernetes">
+<h2>Why Kubernetes?<a class="headerlink" href="#why-kubernetes" title="Permalink to this headline">¶</a></h2>
+<p>We are currently living in the  ‘<strong>container era</strong>’: almost every application is being isolated inside a lightweight container, which can then be run in any type of system.<br />
+In a production environment, manually managing the containers that run the applications, ensuring that there is no downtime etc. is very tedious and time consuming.<br />
+That’s how Kubernetes comes to the rescue! Kubernetes provides a framework to run distributed systems resiliently. It takes care of scaling and failover for your application, provides deployment patterns, and more.</p>
+<img src="images/kubernetes.svg" alt="kubernetes" width="400" style="float: left"/>  
+<br>
+<br>
+<br>
+<p>A key benefit for operations teams of running Apache Kafka on Kubernetes is <strong><em>infrastructure abstraction</em></strong>: <u>it can be configured once and run everywhere</u>.<br />
+The inherent scalability of Kubernetes is a natural complement to Apache Kafka: it allows applications to <strong>scale resources up and down with a simple command</strong> or <strong>scale automatically</strong> based on usage.</p>
+<p>Kubernetes also offers Apache Kafka the portability to <strong>span across</strong> on-premises and public, private, or hybrid clouds, and use <strong>different operating systems</strong>.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
