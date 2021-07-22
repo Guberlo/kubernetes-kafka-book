@@ -1,16 +1,19 @@
 # Strimzi
+<p style="text-align: center">
+    <img src="images/strimzi.png" alt="strimzi" align="center"/>
+</p>
 
-Strimzi is an Open Source project, part of the Cloud Native Computing Foundation (**CNCF**), which provides a way to easily run and deploy a Kafka cluster on Kubernetes.  
+**Strimzi** is an Open Source project, part of the Cloud Native Computing Foundation (**CNCF**), which provides a way to easily run and deploy a Kafka cluster on Kubernetes.  
 A key feature of Strimzi is represented by the '**Strimzi Operators**'.
 
 ## Strimzi Operators
 
-In Kubernetes, operators are a method of packaging, deploying and managing applications. Strimzi Operators automate common and complex tasks related to Kafka deployment, making our life easier.  
+In Kubernetes, operators are a method of _packaging, deploying and managing applications_. Strimzi Operators automate common and complex tasks related to **Kafka deployment**, making our life easier.  
 In particular Strimzi operators simplify the process of:
-- Deploying and running Kafka components
-- Configuring and securing access to Kafka
-- Managing brokers
-- Creating and managing topics and users
+- **Deploying** and running Kafka components
+- **Configuring** and securing access to Kafka
+- **Managing** brokers
+- **Creating** and **managing** topics and users
 
 Operators:
 - **Cluster Operator**: Deploys and manages the whole kafka cluster and it's components, including the Entity Operator.
