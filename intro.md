@@ -26,17 +26,18 @@ If we find ourselves in one of the following use cases, then we might consider t
 
 ## Why Kubernetes?
 
-We are currently living in the  '**container era**': almost every application is being isolated inside a lightweight container, which can then be run in any type of system.  
-In a production environment, manually managing the containers that run the applications, ensuring that there is no downtime etc. is very tedious and time consuming.  
-That's how Kubernetes comes to the rescue! Kubernetes provides a framework to run distributed systems resiliently. It takes care of scaling and failover for your application, provides deployment patterns, and more.  
+We are currently living in the  '**container era**': almost every application is being isolated inside a lightweight container, which can then be run in **any type of system**.  
+In a production environment, **_manually managing_** the containers that run the applications, ensuring that there is no downtime etc. is very **_tedious and time consuming_**.  
+That's how Kubernetes comes to the rescue! Kubernetes provides a framework to **run distributed systems resiliently**. It takes care of scaling and failover for your application, provides deployment patterns, and more.  
   
-  
-<img src="images/kubernetes.svg" alt="kubernetes" width="400" style="float: left"/>  
-<br>
-<br>
-<br>
+```{image} images/kubernetes.svg
+:alt: kubernetes
+:width: 400px
+:align: left
+```
 
 A key benefit for operations teams of running Apache Kafka on Kubernetes is __*infrastructure abstraction*__: <u>it can be configured once and run everywhere</u>.  
+
 The inherent scalability of Kubernetes is a natural complement to Apache Kafka: it allows applications to **scale resources up and down with a simple command** or **scale automatically** based on usage.  
   
 

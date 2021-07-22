@@ -1,6 +1,7 @@
 # Kafka on kubernetes using 'Strimzi'
 
 ## Requirements:
+- Install [docker](https://docs.docker.com/engine/install/)
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 - Install [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
@@ -15,22 +16,22 @@
     ```sh
     $ kubectl create namespace kafka # Created for a good practice
     ```
-- Install Strimzi on kubernetes:
+- Create a Kafka cluster on Kubernetes using strimzi image:
     ```sh
     $ kubectl create -f https://strimzi.io/install/latest?namespace=kafka -n kafka
     ```
 - Set a persistent (JBOD) Kafka cluster:
     ```sh
-    # One node for Kafka and Zookeeper  
+    # One node for Kafka and one for Zookeeper  
     $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
     ```
-- Wait for Kubernetes to run all the pods:
+- Wait for Kubernetes to start all the pods:
     ```sh
     kubectl wait kafka/my-cluster --for=condition=Ready --timeout=300s -n kafka
     ```
 - Create topics:
     ```sh
-    kubectl apply -f {folder with all .yml topic files} -n kafka
+    kubectl apply -f kafka/kafka-topics.yml -n kafka
     ```
 - Check the existing topics:
     ```sh
