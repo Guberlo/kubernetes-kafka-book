@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; Kafka on Kubernetes</title>
+    <title>Setup a Kafka Cluster on Kubernetes &#8212; Kafka on Kubernetes</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -84,7 +84,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Welcome to your Jupyter Book
+   Setup a Kafka Cluster on Kubernetes
   </a>
  </li>
 </ul>
@@ -186,6 +186,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-kafka">
+   Why Kafka?
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -194,19 +207,31 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note!</p>
+  <div class="section" id="setup-a-kafka-cluster-on-kubernetes">
+<h1>Setup a Kafka Cluster on Kubernetes<a class="headerlink" href="#setup-a-kafka-cluster-on-kubernetes" title="Permalink to this headline">¶</a></h1>
+<p>This is a simple book which illustrates how to easily set up a development Kafka cluster on Kubernetes.</p>
+<div class="section" id="why-kafka">
+<h2>Why Kafka?<a class="headerlink" href="#why-kafka" title="Permalink to this headline">¶</a></h2>
+<p>Apache Kafka is an open source, distributed streaming platform developed by LinkedIn to manage​
+the huge amount of messages per day. Its architecture and capabilities can deliver:</p>
+<ul class="simple">
+<li><p>Microservices architecture and extremely high throughput data sharing</p></li>
+<li><p>Message ordering guarantees</p></li>
+<li><p>Message rewind/replay from data storage to reconstruct an application state</p></li>
+<li><p>Horizontal scalability in a cluster configuration</p></li>
+</ul>
+<p>If we find ourselves in one of the following use cases, then we might consider to start using Kafka:</p>
+<ul class="simple">
+<li><p>Event-driven architectures</p></li>
+<li><p>Event sourcing to capture changes to the state of an application as a log of events</p></li>
+<li><p>Message brokering</p></li>
+<li><p>Website activity tracking</p></li>
+<li><p>Operational monitoring through metrics</p></li>
+<li><p>Log collection and aggregation</p></li>
+<li><p>Commit logs for distributed systems</p></li>
+<li><p>Stream processing so that applications can respond to data in real time</p></li>
+</ul>
 </div>
-<p>And here is a code block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">mc</span><span class="o">^</span><span class="mi">2</span>
-</pre></div>
-</div>
-<p>Check out the content pages bundled with this sample book to see more.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

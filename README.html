@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Kafka on Kubernetes</title>
+    <title>How to build &#8212; Kafka on Kubernetes</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -83,7 +83,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   Setup a Kafka Cluster on Kubernetes
   </a>
  </li>
 </ul>
@@ -189,7 +189,24 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   How to build
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-requisites">
+     Pre-requisites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-publish">
+   How to publish
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -201,8 +218,24 @@
         
               <div>
                 
-  <p><a class="reference external" href="https://jupyterbook.org/start/publish.html">https://jupyterbook.org/start/publish.html</a></p>
-<p><a class="reference external" href="https://webhookrelay.com/blog/2018/07/17/auto-deploy-on-git-push/">https://webhookrelay.com/blog/2018/07/17/auto-deploy-on-git-push/</a></p>
+  <div class="section" id="how-to-build">
+<h1>How to build<a class="headerlink" href="#how-to-build" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Follow this to install <a class="reference external" href="https://jupyterbook.org/start/overview.html">jupyter-book</a>.</p></li>
+</ol>
+<p>In order to build the book do the following steps:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">~</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">kubernetes-kafka-book</span></code></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="how-to-publish">
+<h1>How to publish<a class="headerlink" href="#how-to-publish" title="Permalink to this headline">¶</a></h1>
+<p>Inside this folder type: <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code>.</p>
+</div>
 
     <script type="text/x-thebe-config">
     {
