@@ -3,8 +3,9 @@
 ```{image} images/kafka-kubernetes.png
 :alt: kubernetes
 :width: 400px
-:align: left
-```
+:align: center
+```  
+
 
 ## Requirements:
 - Install [docker](https://docs.docker.com/engine/install/)
