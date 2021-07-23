@@ -1,5 +1,5 @@
 # Strimzi
-```{image} images/kubernetes.svg
+```{image} images/strimzi.png
 :alt: kubernetes
 :width: 400px
 :align: center
