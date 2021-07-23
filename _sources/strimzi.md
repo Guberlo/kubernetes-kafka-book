@@ -1,7 +1,9 @@
 # Strimzi
-<p style="text-align: center">
-    <img src="images/strimzi.png" alt="strimzi" align="center"/>
-</p>
+```{image} images/kubernetes.svg
+:alt: kubernetes
+:width: 400px
+:align: center
+```
 
 **Strimzi** is an Open Source project, part of the Cloud Native Computing Foundation (**CNCF**), which provides a way to easily run and deploy a Kafka cluster on Kubernetes.  
 A key feature of Strimzi is represented by the '**Strimzi Operators**'.
