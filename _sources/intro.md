@@ -36,7 +36,8 @@ That's how Kubernetes comes to the rescue! Kubernetes provides a framework to **
 :align: left
 ```
 
-A key benefit for operations teams of running Apache Kafka on Kubernetes is __*infrastructure abstraction*__: <u>it can be configured once and run everywhere</u>.  
+A key benefit for operations teams of running Apache Kafka on Kubernetes is __*infrastructure abstraction*__:  
+<u>it can be configured once and run everywhere</u>.  
 
 The inherent scalability of Kubernetes is a natural complement to Apache Kafka: it allows applications to **scale resources up and down with a simple command** or **scale automatically** based on usage.  
   
