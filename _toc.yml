@@ -5,5 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: strimzi
-- file: page
+- file: first-steps
 - file: notebooks
