@@ -1,5 +1,11 @@
 # Kafka on kubernetes using 'Strimzi'
 
+```{image} images/kafka-kubernetes.png
+:alt: kubernetes
+:width: 400px
+:align: left
+```
+
 ## Requirements:
 - Install [docker](https://docs.docker.com/engine/install/)
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
