@@ -63,3 +63,42 @@ spec:
   config:
     retention.ms: 7200000
     segment.bytes: 1073741824
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: purchase-log
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  partitions: 3
+  replicas: 1
+  config:
+    retention.ms: 7200000
+    segment.bytes: 1073741824
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: content
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  partitions: 3
+  replicas: 1
+  config:
+    retention.ms: 7200000
+    segment.bytes: 1073741824
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: matching
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  partitions: 3
+  replicas: 1
+  config:
+    retention.ms: 7200000
+    segment.bytes: 1073741824

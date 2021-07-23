@@ -1,5 +1,12 @@
 # Kafka on kubernetes using 'Strimzi'
 
+```{image} images/kafka-kubernetes.png
+:alt: kubernetes
+:width: 400px
+:align: center
+```  
+
+
 ## Requirements:
 - Install [docker](https://docs.docker.com/engine/install/)
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
@@ -20,10 +27,10 @@
     ```sh
     $ kubectl create -f https://strimzi.io/install/latest?namespace=kafka -n kafka
     ```
-- Set a persistent (JBOD) Kafka cluster:
+- Set up a Kafka cluster with ephemeral storage (in production we'd like to have persistent):
     ```sh
     # One node for Kafka and one for Zookeeper  
-    $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+    $ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-ephemeral-single.yaml -n kafka
     ```
 - Wait for Kubernetes to start all the pods:
     ```sh
@@ -38,5 +45,14 @@
     # Create a new pod which will execute the kafka-topic.sh script
     kubectl -n kafka run kafka-topics -it --image=quay.io/strimzi/kafka:0.24.0-kafka-2.8.0 --rm=true --restart=Never -- bin/kafka-topics.sh --list --bootstrap-server my-cluster-kafka-bootstrap:9092
     ```
-
-Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+- Let's test everything running a producer and a consumer:
+    ```sh
+    # Create a new pod running a Kafka producer, which sends messages to the 'advertisers' topic
+    kubectl -n kafka run kafka-producer -it --image=quay.io/strimzi/kafka:0.24.0-kafka-2.8.0 --rm=true --restart=Never -- bin/kafka-console-producer.sh --broker-list my-cluster-kafka-bootstrap:9092 --topic advertisers
+    ```  
+      
+    ```sh
+    # Create a new pod running a Kafka consumer, which consumes messages from the 'advertisers' topic
+    kubectl -n kafka run kafka-consumer -it --image=quay.io/strimzi/kafka:0.24.0-kafka-2.8.0 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic advertisers --from-beginning
+    ```
+    
